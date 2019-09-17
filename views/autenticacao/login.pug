@@ -1,0 +1,16 @@
+extends ../base
+
+block conteudo
+  .row.justify-content-center
+    .col-lg-4
+      if mensagem
+        .alert.alert-danger= mensagem
+      form(action='/login' method='post')
+        .form-group
+          label(for='email') Email
+          input.form-control#email(type='email' name='email')
+          small.form-text.text-muted Igual ao seu cadastro.
+        .form-group
+          label(for='senha') Senha
+          input.form-control#senha(type='password' name='senha')
+        button.btn.btn-primary(type='submit') Login

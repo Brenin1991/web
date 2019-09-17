@@ -1,0 +1,8 @@
+extends ../base
+
+block conteudo
+  .row.justify-content-center
+    .col-lg-4
+      form(action='/registrar' method='post')
+        include _formulario
+        button.btn.btn-primary(type='submit') Registrar
